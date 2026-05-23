@@ -27,3 +27,5 @@ terraform.rc
 *.pem
 *.key
 *.cert
+
+myenv/
