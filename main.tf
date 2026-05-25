@@ -68,3 +68,10 @@ resource "aws_lb_target_group_attachment" "main" {
   target_id        = module.ec2_instance.ec2_ids[count.index]
   port             = 80
 }
+
+module "cloud_watch_conf" {
+  source = "./my_modules/CLOUD_WATCH"
+  ec2_ids =  module.ec2_instance.ec2_ids
+  env = var.env
+  EMAIL = var.email
+}

@@ -38,3 +38,8 @@ variable "key_name" {
   description = "EC2 key pair name"
   type        = string
 }
+
+variable "email" {
+  description = "email id for sns topic and alarm"
+  type = string
+}
